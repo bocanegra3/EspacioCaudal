@@ -532,7 +532,7 @@ header div img {
   display: grid;
   grid-template-columns: 1fr;
     position: fixed; 
-    top: 65px;
+    top: 85px;
     right: 120%;
     background-color: #f8f8f8;
     width: 100%;   
@@ -609,7 +609,7 @@ header div img {
   }
   .titulosobremi{
   display:block;
-  top: 15%;
+  top: 18%;
   left: 0.5%;
   background-color: #748dae75;
   }
