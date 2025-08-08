@@ -414,7 +414,7 @@ i {
   .nav-list li a {
   display: grid;
   
-  padding-top: 1.5rem;
+  padding-top: 1.2rem;
   padding-bottom:1.52rem;
   color: #4aa6c2;
   text-align: center;
@@ -448,12 +448,13 @@ header div img {
     width: 50vw;
     height: 65vh;
   }
+
     .titulosobremi{
   position: absolute;
   top: 20%;
   left: 60%;
   background-color: rgba(230, 228, 239, 0.7);
-  width: 20rem;
+  width: 20rem; 
 }
   .text-box0{
   position: absolute;
@@ -531,7 +532,7 @@ header div img {
   display: grid;
   grid-template-columns: 1fr;
     position: fixed; 
-    top: 80px;
+    top: 65px;
     right: 120%;
     background-color: #f8f8f8;
     width: 100%;   
@@ -571,16 +572,12 @@ header div img {
 }
 
 .text-box{
-    display: contents;
-    top: 10rem;
-    left: 0;
-    background-color: rgba(228, 231, 239, 0.7);
-    width: 23rem;
-    order: 2;
-    border:solid;
-    border-color:#000000;
+    display:contents;
   }
+.text-box-a{
+    display: contents;
 
+  }
   .footerindex div ul li{
   bottom: 2rem;
   border:solid;
@@ -593,7 +590,8 @@ header div img {
   text-align: right;  
   padding: 1rem;
   color: #ffffff;
-  background-color: #748DAE;
+  background-color: #748DAE; 
+  font-size: 1.3rem; 
 }
 
  .imgsobremi{
@@ -601,6 +599,12 @@ header div img {
     width: 100%;
     height: 100%;
     padding-left: 0;
+  }
+  .titulosobremi{
+  display:block;
+  top: 15%;
+  left: 0.5%;
+  background-color: #748dae75;
   }
 .text-box0{
     display: contents;
@@ -613,12 +617,11 @@ header div img {
     border-color:#000000;
   }
 
-    .footersobremi div ul li{
+  .footersobremi div ul li{
   bottom: 2rem;
   border:solid;
   border-color:#ffffff;
-
-}
+  }
 
 /*--------------------PORTFOLIO----------------------------*/
 
@@ -640,9 +643,19 @@ display: block;
 .main-container-cursos{
   display: block;
 }
-
+.titulocursos{
+    font-size: 1.3rem; 
+}
 .section-box section h3{
   margin-left: -1rem;
+}
+.main-container-cursos div div h4 {
+    text-align: center;
+    /* border-right: 2rem; */
+    padding-right: 1rem;
+    background-color: #748dae8f;
+    color: #000000;   
+    padding: 0.5rem;
 }
 .videoscursos {
   border:0;
@@ -660,14 +673,23 @@ display: block;
   border: 0px;
 }
  /*---------CONTACTO--------------*/
+ *,
+*::before,
+*::after {
+  box-sizing: content-box !important;
+}
  .main-container-contacto{
+  display: grid;
   grid-template-columns: 1fr;
  }
 .titulo-contacto{
   width: 25rem;
   position: absolute;
+  width: 100%;
 }
-
+.titulo-contacto h1{
+    font-size: 1.2rem; 
+}
  .text-box3 {
     display: contents; 
     position: absolute;   
@@ -677,7 +699,9 @@ display: block;
     order: 1;
     z-index: 99;
 }
-
+.form-section-container{
+  grid-row: inherit;
+}
 .imagencontacto {
 grid-row: 1/2;
 position:unset;
