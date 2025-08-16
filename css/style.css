@@ -48,7 +48,7 @@ body {
   grid-template-rows: auto 1fr auto;  
   max-width: 1920px;
 }
-div.containte{
+div.container{
   margin-left: 0;
   max-width: 1920px;
 }
