@@ -1,0 +1,17 @@
+footer {
+      grid-row: 3; 
+      display: grid;
+      /* https://grabient.com/HQdgrAjANMAcAMA2GJHOAZgJzxtkeIsMEYxwE8GJiYUALMAEzYPP1ZtO0xVNQRgYLPQEUkeDBiA?style=linearGradient&steps=7&angle=90 */
+      background: linear-gradient(90deg, rgba(57, 73, 78, 1.000) 0.000%, rgba(72, 84, 97, 1.000) 16.667%, rgba(91, 96, 120, 1.000) 33.333%, rgba(114, 110, 146, 1.000) 50.000%, rgba(140, 125, 174, 1.000) 66.667%, rgba(168, 142, 204, 1.000) 83.333%, rgba(196, 160, 233, 1.000) 100.000%);
+      width: 100%;
+      border: 0.3rem;
+      ul {list-style-type: none;
+        li {padding-left: 1rem; text-align: right;padding-right:0.5rem;
+          a {padding: 0.2rem; text-decoration: none; font-family: $tipografia-ttlossec;transition: background-color 0.8s ease;
+            &:visited {color: #480db4;}
+            &:hover {color: #ffffff;}
+          i{padding:1rem;}
+        }
+      }
+    }
+  }

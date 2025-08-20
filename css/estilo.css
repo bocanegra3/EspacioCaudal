@@ -1,9 +1,389 @@
 /*--------------------Tipografias--------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Text:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=DM+Serif+Text:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=DM+Serif+Text:ital@0;1&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
 /*tipografias variables*/
 /*colores variables*/
+/*MIXINS*/
+div.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  max-width: 1920px;
+  margin-left: 0;
+  /*header*/
+}
+div.container header div.header-container {
+  display: grid;
+  grid-template-columns: auto 5fr;
+}
+div.container header div.header-container label.logo img {
+  display: flex;
+  position: relative;
+  margin-left: 0.4rem;
+  width: 6rem;
+  height: 4rem;
+}
+div.container header div.header-container .navbar {
+  display: flex;
+  justify-content: space-around;
+}
+div.container header div.header-container .navbar #check {
+  display: none;
+}
+div.container header div.header-container .navbar .checkbtn {
+  font-size: 30px;
+  color: #261fb3;
+  cursor: pointer;
+  display: none;
+}
+div.container header div.header-container .navbar .nav-list ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  background-color: #ffffff;
+  list-style: none;
+}
+div.container header div.header-container .navbar .nav-list ul li a {
+  color: #000000;
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+  padding: 1rem;
+}
+div.container header div.header-container .navbar .nav-list ul li a:hover {
+  background-color: rgba(245, 203, 203, 0.1568627451);
+  color: #970ce7;
+  border: solid;
+  border-color: #6b31c9;
+}
+div.container header div.header-container .navbar .nav-list ul li a:active {
+  color: rgb(209, 96, 96);
+}
+
+main {
+  background-color: rgba(218, 203, 245, 0.8);
+}
+
+/*main*/
+.main-container {
+  display: grid;
+  background-color: rgba(218, 203, 245, 0.8);
+}
+
+/*main index*/
+.main-inicio {
+  display: grid;
+}
+.main-inicio h1 {
+  text-align: right;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
+  font-family: "Cinzel", serif;
+}
+.main-inicio .text-box {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  background-color: rgba(230, 228, 239, 0.7);
+  width: 20rem;
+}
+.main-inicio .text-box-a {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  background-color: rgba(230, 228, 239, 0.7);
+  width: 20rem;
+}
+
+/*main sobremi*/
+.main-sobremi {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.main-sobremi h1 {
+  text-align: right;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
+  font-family: "Cinzel", serif;
+  grid-column: 1/3;
+}
+.main-sobremi div {
+  display: grid;
+  grid-column: 1/4;
+  background: white;
+}
+.main-sobremi div .imgsobremi {
+  grid-column: 2/3;
+}
+.main-sobremi div .text-container {
+  grid-column: 3/4;
+}
+.main-sobremi div .text-container element.style {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.main-sobremi div .text-container .titulosobremi {
+  text-align: center;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #000000;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-sobremi div .text-box0 {
+  grid-row: 2/4;
+  grid-column: 1/4;
+  display: flex;
+  background-color: rgb(253, 253, 253);
+  width: 37rem;
+  position: relative;
+  text-align: justify;
+}
+
+/*main-portfolio*/
+.main-container-portfolio {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto, 1fr, 1fr;
+  background-color: rgba(218, 203, 245, 0.8);
+}
+.main-container-portfolio .main-title-container {
+  display: grid;
+  grid-column: 1/12;
+  grid-row: 1/2;
+  text-align: right;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
+  font-family: "Cinzel", serif;
+}
+.main-container-portfolio .cards {
+  display: flex;
+  grid-template-columns: auto;
+  grid-column: 1/13;
+  justify-content: center;
+}
+.main-container-portfolio .cards .card {
+  margin: 0.1rem;
+}
+.main-container-portfolio .cards .card .card-title {
+  text-align: center;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #000000;
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+.main-container-portfolio .cards .card .card-link {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid black;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  color: black;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.main-container-portfolio .cards .card .card-link:hover {
+  color: white;
+  background-color: rgba(218, 203, 245, 0.8);
+  border-color: rgba(218, 203, 245, 0.8);
+}
+.main-container-portfolio div img {
+  width: 98vw;
+}
+
+/*FORMACION Y CURSOS*/
+.main-container-cursos {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-area: "titulo" "titulo" "carousel" "carousel";
+  background-color: rgba(218, 203, 245, 0.8);
+}
+.main-container-cursos .titulocursos {
+  display: grid;
+  grid-area: titulo;
+  grid-column: 1/3;
+  grid-row: auto;
+  text-align: right;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
+  font-family: "Cinzel", serif;
+}
+.main-container-cursos #carouselExample {
+  background-color: #000000;
+}
+.main-container-cursos #carouselExample .carousel-indicators {
+  bottom: -3rem;
+  width: 98vw;
+  margin-left: 0%;
+}
+.main-container-cursos #carouselExample button .carousel-control-prev-icon {
+  background-color: black !important;
+}
+.main-container-cursos #carouselExample button .carousel-control-next-icon {
+  background-color: black !important;
+}
+.main-container-cursos #carouselExample .carousel-item .card-body .botonvermas {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid black;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  color: black;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.main-container-cursos #carouselExample .carousel-item .card-body .botonvermas:hover {
+  color: white;
+  background-color: rgba(218, 203, 245, 0.8);
+  border-color: rgba(218, 203, 245, 0.8);
+}
+
+/*MAIN CONTACTO*/
+.main-container-contacto {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: "titulo" "titulo" "titulo" "texto" "imagen" "imagen" "contacto" "imagen" "imagen";
+  background-color: rgba(218, 203, 245, 0.8);
+}
+.main-container-contacto .titulo-contacto {
+  display: grid;
+  grid-column: 1/4;
+  text-align: right;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
+  font-family: "Cinzel", serif;
+}
+.main-container-contacto .info-main {
+  display: grid;
+  grid-row: 2/2;
+  padding: 4rem;
+  padding-left: 5rem;
+  padding-top: 8rem;
+  background: #f8f8f8;
+}
+.main-container-contacto .form-section-container {
+  display: grid;
+  grid-row: 3/3;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.1rem;
+  padding-left: 5rem;
+  text-align: left;
+  background: #f8f8f8;
+}
+.main-container-contacto .form-section-container #contacto h2 {
+  text-align: center;
+  padding-right: 2rem;
+  padding: 0.3rem;
+  color: #000000;
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+.main-container-contacto .form-section-container #contacto form button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid black;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  color: black;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.main-container-contacto .form-section-container #contacto form button:hover {
+  color: white;
+  background-color: rgba(218, 203, 245, 0.8);
+  border-color: rgba(218, 203, 245, 0.8);
+}
+.main-container-contacto .imagencontacto {
+  display: grid;
+  grid-row: 2/4;
+}
+.main-container-contacto .imagencontacto .img-contacto-box {
+  display: grid;
+  justify-content: space-around;
+  background: white;
+}
+.main-container-contacto .imagencontacto .img-contacto-box .imgcontacto {
+  width: 45vw;
+  height: 69vh;
+  align-items: stretch;
+}
+
+footer {
+  grid-row: 3;
+  display: grid;
+  /* https://grabient.com/HQdgrAjANMAcAMA2GJHOAZgJzxtkeIsMEYxwE8GJiYUALMAEzYPP1ZtO0xVNQRgYLPQEUkeDBiA?style=linearGradient&steps=7&angle=90 */
+  background: linear-gradient(90deg, rgb(57, 73, 78) 0%, rgb(72, 84, 97) 16.667%, rgb(91, 96, 120) 33.333%, rgb(114, 110, 146) 50%, rgb(140, 125, 174) 66.667%, rgb(168, 142, 204) 83.333%, rgb(196, 160, 233) 100%);
+  width: 100%;
+  border: 0.3rem;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  padding-left: 1rem;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+footer ul li a {
+  padding: 0.2rem;
+  text-decoration: none;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  transition: background-color 0.8s ease;
+}
+footer ul li a:visited {
+  color: #480db4;
+}
+footer ul li a:hover {
+  color: #ffffff;
+}
+footer ul li a i {
+  padding: 1rem;
+}
+
 /* --------------------- RESET --------------------- */
 * {
   margin: 0;
@@ -12,228 +392,7 @@
 
 /*--------------------HEADER-1920PX------------------*/
 body {
-  background: rgba(245, 203, 203, 0.6431372549);
-}
-body div.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  max-width: 1920px;
-  margin-left: 0;
-  /*header*/
-  /*main*/
-  /*main-portfolio*/
-}
-body div.container header div.header-container {
-  display: grid;
-  grid-template-columns: auto 5fr;
-}
-body div.container header div.header-container label.logo {
-  font-size: 1.5rem;
-}
-body div.container header div.header-container label.logo img {
-  margin-left: 0.4rem;
-  width: 8rem;
-  height: 6rem;
-  display: flex;
-  position: relative;
-}
-body div.container header div.header-container .navbar {
-  display: table-row;
-  padding: 0;
-}
-body div.container header div.header-container .navbar #check {
-  display: none;
-}
-body div.container header div.header-container .navbar .checkbtn {
-  font-size: 30px;
-  color: #261fb3;
-  cursor: pointer;
-  display: none;
-}
-body div.container header div.header-container .navbar .nav-list ul {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  background-color: #ffffff;
-  list-style: none;
-}
-body div.container header div.header-container .navbar .nav-list ul li a {
-  display: grid;
-  padding: 1.9rem 0;
-  color: #748dae;
-  text-align: center;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.6rem;
-}
-body div.container header div.header-container .navbar .nav-list ul li a:hover {
-  background-color: rgba(245, 203, 203, 0.1568627451);
-  color: #ffafaf;
-  border: solid;
-  border-color: #f5e0e0;
-}
-body div.container header div.header-container .navbar .nav-list ul li a:active {
-  color: rgb(209, 96, 96);
-}
-body div.container .main-container {
-  display: grid;
-  background-color: rgba(245, 203, 203, 0.6431372549);
-  /*main index*/
-  /*main sobremi*/
-}
-body div.container .main-container .main-inicio {
-  display: grid;
-}
-body div.container .main-container .main-inicio h1 {
-  font-family: "Cinzel", serif;
-  text-align: right;
-  padding-right: 2rem;
-  padding: 1.3rem;
-  color: #ffffff;
-  background-color: #748dae;
-}
-body div.container .main-container .main-inicio .text-box {
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  background-color: rgba(230, 228, 239, 0.7);
-  width: 20rem;
-}
-body div.container .main-container .main-inicio .text-box-a {
-  position: absolute;
-  top: 40%;
-  left: 80%;
-  background-color: rgba(230, 228, 239, 0.7);
-  width: 20rem;
-}
-body div.container .main-container .main-sobremi {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-body div.container .main-container .main-sobremi h1 {
-  font-family: "Cinzel", serif;
-  text-align: right;
-  padding-right: 2rem;
-  padding: 1.3rem;
-  color: #ffffff;
-  background-color: #748dae;
-  grid-column: 1/3;
-}
-body div.container .main-container .main-sobremi div {
-  display: grid;
-  grid-column: 1/4;
-  background: white;
-}
-body div.container .main-container .main-sobremi div .imgsobremi {
-  grid-column: 2/3;
-}
-body div.container .main-container .main-sobremi div .text-container {
-  grid-column: 3/4;
-}
-body div.container .main-container .main-sobremi div .text-container element.style {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-body div.container .main-container .main-sobremi div .text-container .titulosobremi {
-  display: block;
-  background-color: rgb(255, 255, 255);
-  width: 30rem;
-  text-align: center;
-  padding: 1.2rem;
-}
-body div.container .main-container .main-sobremi div .text-container .text-box0 {
-  display: block;
-  background-color: rgb(253, 253, 253);
-  width: 30rem;
-}
-body div.container .main-container-portfolio {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto, 1fr, 1fr;
-}
-body div.container .main-container-portfolio .main-title-container {
-  display: grid;
-  grid-column: 1/12;
-  grid-row: 1/2;
-  font-family: "Cinzel", serif;
-  text-align: right;
-  padding-right: 2rem;
-  padding: 0.7rem;
-  color: #ffffff;
-  background-color: #748dae;
-}
-body div.container .main-container-portfolio .cards {
-  display: flex;
-  grid-template-columns: auto;
-  grid-column: 1/13;
-  justify-content: center;
-}
-body div.container .main-container-portfolio .cards .card {
-  margin: 0.1rem;
-}
-body div.container .main-container-portfolio div img {
-  width: 98vw;
-}
-body div.container .main-container-cursos {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-  grid-area: "titulo" "titulo" "carousel" "carousel";
-}
-body div.container .main-container-cursos .titulocursos {
-  display: grid;
-  grid-area: titulo;
-  grid-column: 1/3;
-  grid-row: auto;
-  font-family: "Cinzel", serif;
-  width: 100vw;
-  text-align: right;
-  padding-right: 2rem;
-  padding: 1.3rem;
-  color: #ffffff;
-  background-color: #748dae;
-}
-body div.container .main-container-cursos #carouselExample .carousel-indicators {
-  bottom: -3rem;
-  width: 98vw;
-  margin-left: 0%;
-}
-body div.container .main-container-cursos #carouselExample button .carousel-control-prev-icon {
-  background-color: black !important;
-}
-body div.container .main-container-cursos #carouselExample button .carousel-control-next-icon {
-  background-color: black !important;
-}
-body div.container footer {
-  display: grid;
-  background-color: #ffeaea;
-  width: 100%;
-}
-body div.container footer ul {
-  list-style-type: none;
-}
-body div.container footer ul li {
-  padding-left: 5rem;
-  text-align: right;
-}
-body div.container footer ul li a {
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-body div.container footer ul li a i {
-  padding-right: 2rem;
-}
-body div.container footer ul li a:visited {
-  color: #88a9d4;
-}
-body div.container footer ul li a:hover {
-  color: #143d60;
+  background: rgba(218, 203, 245, 0.8);
 }
 
 /*# sourceMappingURL=estilo.css.map */

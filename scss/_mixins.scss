@@ -1,0 +1,41 @@
+/*MIXINS*/
+@mixin ttprincipales($text-align,$padding){
+  text-align: $text-align;
+  padding-right: 2rem;
+  padding: $padding;
+  color:#ffffff;
+  background: /* https://grabient.com/HQdgrAjANMAcAMA2GJHOAZgJzxtkeIsMEYxwE8GJiYUALMAEzYPP1ZtO0zwj1QIcLJyFMw1ZrCxA?style=linearGradient&steps=7&angle=90 */
+ linear-gradient(90deg, rgba(24, 38, 42, 1.000) 0.000%, rgba(35, 45, 59, 1.000) 16.667%, rgba(54, 57, 83, 1.000) 33.333%, rgba(79, 71, 114, 1.000) 50.000%, rgba(109, 88, 149, 1.000) 66.667%, rgba(144, 107, 187, 1.000) 83.333%, rgba(182, 129, 227, 1.000) 100.000%);
+  font-family: $tipografia-ttlos;
+}
+
+@mixin ttsecundarios($text-align,$padding){
+  text-align: $text-align;
+  padding-right: 2rem;
+  padding: $padding;
+  color:$color-sec;
+  font-family: $tipografia-ttlossec;
+}
+@mixin button($color, $hover-bg: $color, $hover-color: #fff) {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $color;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  color: $color;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg;
+    border-color: $hover-bg;
+  }
+}
