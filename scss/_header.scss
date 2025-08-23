@@ -10,6 +10,12 @@ div.container {
       div.header-container {
         display: grid;
         grid-template-columns: auto 5fr;
+           @include tablet{
+                display: flex;
+              } 
+            @include mobile{
+              justify-content: space-between;
+            }
 
         label.logo img {
             display: flex;
@@ -29,6 +35,13 @@ div.container {
             color: #261fb3;
             cursor: pointer;
             display: none;
+            @include mobile{
+              display: grid;
+              order: 1;
+              margin-right: 10px;
+              margin-top: 20px;
+              justify-content: right; 
+            }
           }
           .nav-list {
             ul {
@@ -38,7 +51,24 @@ div.container {
               align-items: center;
               gap: 12rem;
               background-color: #ffffff;
-              list-style: none;                           
+              list-style: none;    
+              @include tablet{
+                gap:8rem;
+              }
+                           
+              @include mobile{
+                display: grid;
+                grid-template-columns: 1fr;
+                position: fixed; 
+                top: 4rem;
+                gap: 4rem;
+                right: -120%;
+                background-color: #f8f8f8;
+                width: 100%;   
+                transition: all 0.3s;
+                z-index: 100; 
+              }        
+
               li a {
                 color: $color-sec;
                 font-family: $tipografia-nav;
@@ -54,6 +84,9 @@ div.container {
                   font-size: 1.3rem;
                   padding:0.1rem;                 
                 }
+                @include mobile{
+                   font-size: 1rem;
+                 }
                 &:hover {
                   background-color: #f5cbcb28;
                   color: #970ce7;
@@ -66,7 +99,12 @@ div.container {
               }
             }
           }
+          @include mobile{
+          #check:checked ~ .nav-list ul {
+          right: 0;
+          }
         }
       }
     }
+}
 }

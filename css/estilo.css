@@ -15,6 +15,16 @@ div.container header div.header-container {
   display: grid;
   grid-template-columns: auto 5fr;
 }
+@media screen and (max-width: 1020px) {
+  div.container header div.header-container {
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  div.container header div.header-container {
+    justify-content: space-between;
+  }
+}
 div.container header div.header-container label.logo img {
   display: flex;
   position: relative;
@@ -35,6 +45,15 @@ div.container header div.header-container .navbar .checkbtn {
   cursor: pointer;
   display: none;
 }
+@media screen and (max-width: 768px) {
+  div.container header div.header-container .navbar .checkbtn {
+    display: grid;
+    order: 1;
+    margin-right: 10px;
+    margin-top: 20px;
+    justify-content: right;
+  }
+}
 div.container header div.header-container .navbar .nav-list ul {
   display: flex;
   flex-direction: row;
@@ -43,6 +62,25 @@ div.container header div.header-container .navbar .nav-list ul {
   gap: 12rem;
   background-color: #ffffff;
   list-style: none;
+}
+@media screen and (max-width: 1020px) {
+  div.container header div.header-container .navbar .nav-list ul {
+    gap: 8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  div.container header div.header-container .navbar .nav-list ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: fixed;
+    top: 4rem;
+    gap: 4rem;
+    right: -120%;
+    background-color: #f8f8f8;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 100;
+  }
 }
 div.container header div.header-container .navbar .nav-list ul li a {
   color: #000000;
@@ -61,6 +99,11 @@ div.container header div.header-container .navbar .nav-list ul li a {
     padding: 0.1rem;
   }
 }
+@media screen and (max-width: 768px) {
+  div.container header div.header-container .navbar .nav-list ul li a {
+    font-size: 1rem;
+  }
+}
 div.container header div.header-container .navbar .nav-list ul li a:hover {
   background-color: rgba(245, 203, 203, 0.1568627451);
   color: #970ce7;
@@ -69,6 +112,11 @@ div.container header div.header-container .navbar .nav-list ul li a:hover {
 }
 div.container header div.header-container .navbar .nav-list ul li a:active {
   color: rgb(209, 96, 96);
+}
+@media screen and (max-width: 768px) {
+  div.container header div.header-container .navbar #check:checked ~ .nav-list ul {
+    right: 0;
+  }
 }
 
 main {
@@ -93,6 +141,11 @@ main {
   background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
   font-family: "Cinzel", serif;
 }
+@media screen and (max-width: 768px) {
+  .main-inicio h1 {
+    font-size: 1.5rem;
+  }
+}
 .main-inicio .text-box, .main-inicio .text-box-a {
   position: absolute;
   top: 40%;
@@ -105,6 +158,18 @@ main {
     left: 1.5%;
   }
 }
+@media screen and (max-width: 1020px) {
+  .main-inicio .text-box, .main-inicio .text-box-a {
+    width: 15rem;
+    left: 2%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-inicio .text-box, .main-inicio .text-box-a {
+    position: static;
+    width: 100%;
+  }
+}
 .main-inicio .text-box-a {
   top: 40%;
   left: 80%;
@@ -115,9 +180,26 @@ main {
     width: 18.6rem;
   }
 }
+@media screen and (max-width: 1020px) {
+  .main-inicio .text-box-a {
+    width: 14rem;
+    left: 76%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-inicio .text-box-a {
+    position: static;
+    width: 100%;
+  }
+}
 .main-inicio .text-box-b {
   text-align: center;
   font-family: "Edu NSW ACT Cursive", cursive;
+}
+@media screen and (max-width: 768px) {
+  .main-inicio .text-box-b {
+    font-size: 0.9rem;
+  }
 }
 
 /*main sobremi*/
@@ -143,8 +225,30 @@ main {
 .main-sobremi div .imgsobremi {
   grid-column: 2/3;
 }
+@media screen and (max-width: 1280px) {
+  .main-sobremi div .imgsobremi {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .main-sobremi div .imgsobremi {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-sobremi div .imgsobremi {
+    width: 90vw;
+    grid-row: 3/3;
+  }
+}
 .main-sobremi div .text-container {
   grid-column: 3/4;
+}
+@media screen and (max-width: 768px) {
+  .main-sobremi div .text-container {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }
 .main-sobremi div .text-container element.style {
   display: flex;
@@ -167,14 +271,45 @@ main {
   justify-content: center;
   flex-direction: column;
 }
-.main-sobremi div .text-box0 {
+@media screen and (max-width: 1280px) {
+  .main-sobremi div .text-container .titulosobremi {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .main-sobremi div .text-container .titulosobremi {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-sobremi div .text-container .titulosobremi {
+    width: 90vw;
+  }
+}
+.main-sobremi div .text-container .text-box0 {
   grid-row: 2/4;
   grid-column: 1/4;
   display: flex;
+  flex-wrap: nowrap;
   background-color: rgb(253, 253, 253);
-  width: 37rem;
+  width: 38vw;
   position: relative;
   text-align: justify;
+}
+@media screen and (max-width: 1280px) {
+  .main-sobremi div .text-container .text-box0 {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .main-sobremi div .text-container .text-box0 {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-sobremi div .text-container .text-box0 {
+    width: 90vw;
+  }
 }
 
 /*main-portfolio*/
@@ -186,7 +321,7 @@ main {
 }
 .main-container-portfolio .main-title-container {
   display: grid;
-  grid-column: 1/12;
+  grid-column: 1/13;
   grid-row: 1/2;
   text-align: right;
   padding-right: 2rem;
@@ -212,6 +347,11 @@ main {
 }
 .main-container-portfolio .cards .card {
   margin: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .main-container-portfolio .cards .card {
+    width: 13rem !important;
+  }
 }
 .main-container-portfolio .cards .card .card-title {
   text-align: center;
@@ -253,6 +393,11 @@ main {
     width: 97vw;
   }
 }
+@media screen and (max-width: 768px) {
+  .main-container-portfolio .banner {
+    display: none;
+  }
+}
 
 /*FORMACION Y CURSOS*/
 .main-container-cursos {
@@ -277,16 +422,36 @@ main {
 .main-container-cursos #carouselExample {
   background-color: #000000;
 }
+@media screen and (max-width: 768px) {
+  .main-container-cursos #carouselExample {
+    display: contents;
+  }
+}
 .main-container-cursos #carouselExample .carousel-indicators {
   bottom: -3rem;
   width: 98vw;
   margin-left: 0%;
 }
-.main-container-cursos #carouselExample button .carousel-control-prev-icon {
+@media screen and (max-width: 768px) {
+  .main-container-cursos #carouselExample .carousel-indicators {
+    display: none;
+  }
+}
+.main-container-cursos #carouselExample #prev .carousel-control-prev-icon {
   background-color: black !important;
 }
-.main-container-cursos #carouselExample button .carousel-control-next-icon {
+@media screen and (max-width: 768px) {
+  .main-container-cursos #carouselExample #prev {
+    display: none !important;
+  }
+}
+.main-container-cursos #carouselExample #next .carousel-control-next-icon {
   background-color: black !important;
+}
+@media screen and (max-width: 768px) {
+  .main-container-cursos #carouselExample #next {
+    display: none !important;
+  }
 }
 .main-container-cursos #carouselExample .carousel-item .card-body .botonvermas {
   display: inline-block;
@@ -336,7 +501,6 @@ main {
   padding-left: 5rem;
   padding-top: 8rem;
   background: #f8f8f8;
-  width: 30rem;
   align-items: center;
 }
 @media screen and (max-width: 1280px) {
@@ -375,7 +539,7 @@ main {
   color: #000000;
   font-family: "Edu NSW ACT Cursive", cursive;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1020px) {
   .main-container-contacto .form-section-container #contacto h2 {
     text-align: center;
     grid-row: 1/2;
@@ -424,6 +588,11 @@ main {
   height: 69vh;
   align-items: stretch;
 }
+@media screen and (max-width: 768px) {
+  .main-container-contacto .imagencontacto .img-contacto-box .imgcontacto {
+    display: none;
+  }
+}
 
 footer {
   grid-row: 3;
@@ -438,22 +607,23 @@ footer ul {
 }
 footer ul li {
   padding-left: 1rem;
-  text-align: right;
   padding-right: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
-footer ul li a {
+footer ul a {
   padding: 0.2rem;
   text-decoration: none;
   font-family: "Edu NSW ACT Cursive", cursive;
   transition: background-color 0.8s ease;
 }
-footer ul li a:visited {
+footer ul a:visited {
   color: #480db4;
 }
-footer ul li a:hover {
+footer ul a:hover {
   color: #ffffff;
 }
-footer ul li a i {
+footer ul a i {
   padding: 1rem;
 }
 

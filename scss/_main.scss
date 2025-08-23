@@ -5,7 +5,12 @@ main{background-color: $color-ter;}
   /*main index*/
 .main-inicio {
   display: grid;
-  h1 { @include ttprincipales(right,0.3rem);}
+  h1 { 
+    @include ttprincipales(right,0.3rem);
+    @include mobile{
+      font-size: 1.5rem;
+    }
+  }
   .text-box {
     position: absolute;
     top: 40%;
@@ -14,6 +19,14 @@ main{background-color: $color-ter;}
     width: 20rem;
       @include laptops{
       left:1.5%;    
+      }
+      @include tablet{
+      width: 15rem;      
+      left:2%;
+      } 
+      @include mobile{
+        position: static;
+        width: 100%;
       }
     }
     .text-box-a {
@@ -24,10 +37,21 @@ main{background-color: $color-ter;}
         left:75%;
         width: 18.6rem;
       }
+      @include tablet{
+        width:14rem;
+        left:76%;        
+      } 
+         @include mobile{
+        position: static;
+        width: 100%;
+      }
     }
     .text-box-b{
       text-align: center;
       font-family: $tipografia-ttlossec;
+      @include mobile{
+        font-size: 0.9rem;
+      }
     }
 }
 /*main sobremi*/
@@ -40,9 +64,25 @@ main{background-color: $color-ter;}
       display: grid;
       grid-column: 1/4;
       background: white;
-        .imgsobremi {grid-column: 2/3;}
+        .imgsobremi {          
+          grid-column: 2/3;
+          @include laptops{
+            width: 40vw;
+          }
+          @include tablet{
+            width: 45vw;
+          }
+        @include mobile{
+          width: 90vw;
+          grid-row: 3/3;
+        }
+        }
         .text-container {
           grid-column: 3/4;
+          @include mobile{
+          grid-row: 2/3;
+          grid-column: 2/3;          
+          }
           element.style {
             display: flex;
             flex-direction: column;
@@ -60,18 +100,36 @@ main{background-color: $color-ter;}
             flex-wrap: nowrap;
             justify-content: center;
             flex-direction: column;
+            @include laptops{
+            width: 20vw;
+             }
+            @include tablet{
+            width: 20vw;
+            } 
+            @include mobile{            
+            width: 90vw;
             }
-        }
-
-        .text-box0 {
+            }
+          .text-box0 {
           grid-row: 2/4;
           grid-column: 1/4;
           display: flex;
+          flex-wrap: nowrap;
           background-color: rgb(253, 253, 253);
-          width: 37rem;
+          width: 38vw;
           position: relative;
           text-align: justify;
+          @include laptops{
+            width: 20vw;
           }
+          @include tablet{
+               width: 20vw;
+              } 
+          @include mobile{            
+            width: 90vw;
+          }
+          }
+        }             
       }
     }
     /*main-portfolio*/
@@ -83,7 +141,7 @@ main{background-color: $color-ter;}
 
     .main-title-container {
       display: grid;
-      grid-column: 1/12;
+      grid-column: 1/13;
       grid-row: 1/2;        
       @include ttprincipales(right,0.3rem );
       }
@@ -101,16 +159,23 @@ main{background-color: $color-ter;}
       }
         .card {
           margin: 0.1rem;
-
+          @include mobile{
+            width: 13rem!important;
+          }
           .card-title{@include ttsecundarios(center,00.3rem );}
           .card-subtitle{text-align: center;}
           .card-link{@include button(black, $color-ter, white);}
         }
       }
-      .banner {width: 98vw;
-            @include laptops{
-              width: 97vw;
+      .banner {
+      width: 98vw;
+      @include laptops{
+      width: 97vw;
       }
+      @include mobile{
+      display:none;
+      }
+        
       }
     }
 
@@ -130,13 +195,25 @@ main{background-color: $color-ter;}
       }
       #carouselExample {
         background-color: #000000;
+        @include mobile{
+          display: contents;
+        }
         .carousel-indicators {
           bottom: -3rem;
           width: 98vw;
           margin-left: 0%;
+          @include mobile{display:none;}
         }
-        button .carousel-control-prev-icon {background-color: black !important;}
-        button .carousel-control-next-icon {background-color: black !important;}
+        #prev{
+          .carousel-control-prev-icon {background-color: black !important;}
+           @include mobile{display: none!important;}
+        }
+        #next{
+         .carousel-control-next-icon {background-color: black !important;}
+        @include mobile{display: none!important;}
+        }
+      
+        
         .carousel-item .card-body{.botonvermas{@include button(black, $color-ter, white)} }
       }
     }
@@ -161,8 +238,7 @@ main{background-color: $color-ter;}
       padding: 4rem;
       padding-left: 5rem;
       padding-top: 8rem;
-      background: #f8f8f8;
-      width: 30rem;
+      background: #f8f8f8;      
       align-items: center;
             @include laptops{
               padding:1rem;
@@ -171,7 +247,6 @@ main{background-color: $color-ter;}
       .texto .text-box3{
           @include laptops{
             margin:0;
-
           }
         }
       }
@@ -188,7 +263,7 @@ main{background-color: $color-ter;}
         #contacto {  
           display: grid;
           grid-template-columns: 1fr 3fr; 
-          grid-template-rows: auto 1fr;                
+          grid-template-rows: auto 1fr;                       
           h2{ 
           @include ttsecundarios(center,0.3rem );
           @include tablet{       
@@ -217,7 +292,10 @@ main{background-color: $color-ter;}
           .imgcontacto {
           width: 45vw;
           height: 69vh;
-          align-items: stretch;          
+          align-items: stretch;    
+          @include mobile{
+            display:none;
+          }      
         }
         }
       }
