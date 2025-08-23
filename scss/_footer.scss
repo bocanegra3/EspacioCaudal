@@ -6,11 +6,13 @@ footer {
       width: 100%;
       border: 0.3rem;
       ul {list-style-type: none;
-        li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;}
+        li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;          
           a {padding: 0.2rem; text-decoration: none; font-family: $tipografia-ttlossec;transition: background-color 0.8s ease;
-            &:visited {color: #480db4;}
-            &:hover {color: #ffffff;}
+            &:visited {color: #fcfcfc;}
+            &:hover {color: #ffffff;}          
           i{padding:1rem;}
+          
+        }
         }
       }
     }

@@ -160,7 +160,7 @@ main{background-color: $color-ter;}
         .card {
           margin: 0.1rem;
           @include mobile{
-            width: 13rem!important;
+            width: 93vw!important;
           }
           .card-title{@include ttsecundarios(center,00.3rem );}
           .card-subtitle{text-align: center;}

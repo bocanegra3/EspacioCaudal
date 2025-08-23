@@ -350,7 +350,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .main-container-portfolio .cards .card {
-    width: 13rem !important;
+    width: 93vw !important;
   }
 }
 .main-container-portfolio .cards .card .card-title {
@@ -611,19 +611,19 @@ footer ul li {
   display: flex;
   justify-content: space-between;
 }
-footer ul a {
+footer ul li a {
   padding: 0.2rem;
   text-decoration: none;
   font-family: "Edu NSW ACT Cursive", cursive;
   transition: background-color 0.8s ease;
 }
-footer ul a:visited {
-  color: #480db4;
+footer ul li a:visited {
+  color: #fcfcfc;
 }
-footer ul a:hover {
+footer ul li a:hover {
   color: #ffffff;
 }
-footer ul a i {
+footer ul li a i {
   padding: 1rem;
 }
 
