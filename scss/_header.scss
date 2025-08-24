@@ -16,13 +16,26 @@ div.container {
             @include mobile{
               justify-content: space-between;
             }
-
-        label.logo img {
+        .logo{  
+                 
+           img {
+            
             display: flex;
             position: relative;
             margin-left: 0.4rem;
             width: 6rem;
             height: 4rem;
+          
+          }         
+            &:hover{
+              animation: flip-extra 2s ease-in-out;
+              transform-style: preserve-3d;
+              -webkit-transform: rotateY(360deg);
+              -webkit-transform-style: preserve-3d;
+              transform: rotateY(360deg);
+              transform-style: preserve-3d;
+            }
+        
           }
         .navbar {
           display: flex;
@@ -105,6 +118,10 @@ div.container {
           }
         }
       }
+      @keyframes flip-extra {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(540deg); }
+}
     }
 }
 }

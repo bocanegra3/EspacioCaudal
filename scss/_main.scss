@@ -64,10 +64,15 @@ main{background-color: $color-ter;}
       display: grid;
       grid-column: 1/4;
       background: white;
+      
         .imgsobremi {          
           grid-column: 2/3;
           @include laptops{
             width: 40vw;
+          }
+          &:hover{
+            -webkit-transform:scale(1.03);
+            transform:scale(1.03);            
           }
           @include tablet{
             width: 45vw;
@@ -161,6 +166,39 @@ main{background-color: $color-ter;}
           margin: 0.1rem;
           @include mobile{
             width: 93vw!important;
+          }
+          .imgtrans{
+            position: absolute;
+            top: 31%; 
+            left: 09%; 
+            transform: translate(-50%, -50%); 
+            width: 11vw;
+            -webkit-transform:scale(1.1);
+            transform:scale(1.1);  
+            @include laptops{
+              top:32%;
+              left:14%;
+              width:16vw;
+            }
+            @include tablet{
+              width: 20vw;
+            }
+            @include mobile{
+              width: 70vw;
+              top:31%;
+              left:13%;
+            }
+          }
+          .imgtrans:hover{      
+            transform: translate(-50%, -50%);
+           -webkit-transform:scale(1.2);
+            transform:scale(1.2); 
+            transition: transform 1s ease;   
+          }
+
+          &:hover{
+            -webkit-transform:scale(1.03);
+            transform:scale(1.03);    
           }
           .card-title{@include ttsecundarios(center,00.3rem );}
           .card-subtitle{text-align: center;}
