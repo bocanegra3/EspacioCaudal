@@ -373,40 +373,6 @@ main {
     width: 93vw !important;
   }
 }
-.main-container-portfolio .cards .card .imgtrans {
-  position: absolute;
-  top: 31%;
-  left: 9%;
-  transform: translate(-50%, -50%);
-  width: 11vw;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-@media screen and (max-width: 1280px) {
-  .main-container-portfolio .cards .card .imgtrans {
-    top: 32%;
-    left: 14%;
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .main-container-portfolio .cards .card .imgtrans {
-    width: 20vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main-container-portfolio .cards .card .imgtrans {
-    width: 70vw;
-    top: 31%;
-    left: 13%;
-  }
-}
-.main-container-portfolio .cards .card .imgtrans:hover {
-  transform: translate(-50%, -50%);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  transition: transform 1s ease;
-}
 .main-container-portfolio .cards .card:hover {
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
