@@ -1,12 +1,12 @@
+@use 'variables';
+@use 'mixins';
+@use 'header';
+@use 'main';
+@use 'footer';
+@use 'media-queris';
+
 /*--------------------Tipografias--------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=DM+Serif+Text:ital@0;1&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
-@import 'variables';
-@import 'mixins';
-@import 'header';
-@import 'main';
-@import 'footer';
-@import 'media-queris';
-
 
 /* --------------------- RESET --------------------- */
 * {
@@ -15,4 +15,4 @@
 }
 
 /*--------------------HEADER-1920PX------------------*/
-body {background: $color-ter;}  
+body {background: variables.$color-ter;}  

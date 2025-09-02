@@ -1,4 +1,6 @@
-@import 'media-queris';
+@use 'media-queris';
+@use 'variables';
+
 div.container {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -10,10 +12,11 @@ div.container {
       div.header-container {
         display: grid;
         grid-template-columns: auto 5fr;
-           @include tablet{
+        background-color: #ffffff;
+           @include media-queris.tablet{
                 display: flex;
               } 
-            @include mobile{
+            @include media-queris.mobile{
               justify-content: space-between;
             }
         .logo{  
@@ -39,7 +42,7 @@ div.container {
           }
         .navbar {
           display: flex;
-          justify-content: space-around;          
+          justify-content: space-around;                   
           #check {
           display: none;
           }
@@ -48,7 +51,7 @@ div.container {
             color: #261fb3;
             cursor: pointer;
             display: none;
-            @include mobile{
+            @include media-queris.mobile{
               display: grid;
               order: 1;
               margin-right: 10px;
@@ -62,14 +65,13 @@ div.container {
               flex-direction: row;
               justify-content: center;
               align-items: center;
-              gap: 12rem;
-              background-color: #ffffff;
+              gap: 12rem;              
               list-style: none;    
-              @include tablet{
+              @include media-queris.tablet{
                 gap:8rem;
               }
                            
-              @include mobile{
+              @include media-queris.mobile{
                 display: grid;
                 grid-template-columns: 1fr;
                 position: fixed; 
@@ -83,21 +85,21 @@ div.container {
               }        
 
               li a {
-                color: $color-sec;
-                font-family: $tipografia-nav;
+                color: variables.$color-sec;
+                font-family: variables.$tipografia-nav;
                 text-decoration: none;
                 font-size: 1.6rem;
                 transition: color 0.3s;
                 padding: 1rem;
 
-                @include laptops{
+                @include media-queris.laptops{
                   display: grid;                  
                   text-align: center;
                   text-decoration: none;
                   font-size: 1.3rem;
                   padding:0.1rem;                 
                 }
-                @include mobile{
+                @include media-queris.mobile{
                    font-size: 1rem;
                  }
                 &:hover {
@@ -112,7 +114,7 @@ div.container {
               }
             }
           }
-          @include mobile{
+          @include media-queris.mobile{
           #check:checked ~ .nav-list ul {
           right: 0;
           }

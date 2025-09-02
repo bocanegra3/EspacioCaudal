@@ -1,3 +1,5 @@
+@use 'variables';
+
 footer {
       grid-row: 3; 
       display: grid;
@@ -7,7 +9,7 @@ footer {
       border: 0.3rem;
       ul {list-style-type: none;
         li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;          
-          a {padding: 0.2rem; text-decoration: none; font-family: $tipografia-ttlossec;transition: background-color 0.8s ease;
+          a {padding: 0.2rem; text-decoration: none; font-family: variables.$tipografia-ttlossec;transition: background-color 0.8s ease;
             &:visited {color: #fcfcfc;}
             &:hover {color: #ffffff;}          
           i{padding:1rem;}
