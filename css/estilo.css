@@ -117,6 +117,7 @@ div.container header div.header-container .navbar .nav-list ul li a:hover {
   color: #970ce7;
   border: solid;
   border-color: #6b31c9;
+  font-style: italic;
 }
 div.container header div.header-container .navbar .nav-list ul li a:active {
   color: rgb(209, 96, 96);
@@ -371,19 +372,21 @@ main {
 }
 @media screen and (max-width: 1280px) {
   .main-container-portfolio .cards {
+    display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: stretch;
     align-items: stretch;
+    grid-columns: 1/13;
   }
 }
 .main-container-portfolio .cards .card {
+  display: grid;
+  grid-column: 1/13;
   margin: 0.1rem;
-  flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
-  width: 20vw;
 }
 @media screen and (max-width: 768px) {
   .main-container-portfolio .cards .card {
@@ -427,11 +430,12 @@ main {
   border-color: rgba(218, 203, 245, 0.8);
 }
 .main-container-portfolio .banner {
-  width: 98vw;
+  width: 96vw;
+  margin: 0.9rem;
 }
 @media screen and (max-width: 1280px) {
   .main-container-portfolio .banner {
-    width: 97vw;
+    width: 95vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -461,12 +465,22 @@ main {
   font-family: "Cinzel", serif;
 }
 .main-container-cursos #carouselExample {
-  background-color: #000000;
+  background-image: url(../assets/img/carousel1.jpg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1280px) {
+  .main-container-cursos #carouselExample {
+    background-image: url(../assets/img/carousel2.jpg);
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-container-cursos #carouselExample {
     display: contents;
   }
+}
+.main-container-cursos #carouselExample .carousel-item .card {
+  background: rgba(255, 255, 255, 0.8078431373);
 }
 .main-container-cursos #carouselExample .carousel-indicators {
   bottom: -3rem;
@@ -518,33 +532,21 @@ main {
 }
 
 /*MAIN CONTACTO*/
-.main-container-contacto {
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+  }
+}
+main .main-container-contacto {
   display: grid;
   background-image: url(../assets/img/fotovieja1.jpeg);
-  /*     .imagencontacto {
-        display: grid;
-        grid-row: 2/4;       
-        .img-contacto-box{
-          display: grid;
-          justify-content: space-around;
-          background: white;
-            .imgcontacto {
-            width: 45vw;
-            height: 69vh;
-            align-items: stretch;    
-            @include media-queris.mobile{
-              display:none;
-            }      
-          }
-          }
-        } */
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto {
+  main .main-container-contacto {
     background-repeat: no-repeat;
   }
 }
-.main-container-contacto .titulo-contacto {
+main .main-container-contacto .titulo-contacto {
   display: flex;
   text-align: right;
   padding-right: 2rem;
@@ -552,27 +554,34 @@ main {
   color: #ffffff;
   background: linear-gradient(90deg, rgb(24, 38, 42) 0%, rgb(35, 45, 59) 16.667%, rgb(54, 57, 83) 33.333%, rgb(79, 71, 114) 50%, rgb(109, 88, 149) 66.667%, rgb(144, 107, 187) 83.333%, rgb(182, 129, 227) 100%);
   font-family: "Cinzel", serif;
+  flex-direction: row-reverse;
 }
-.main-container-contacto .cajas {
+@media screen and (max-width: 768px) {
+  main .main-container-contacto .titulo-contacto {
+    height: 7rem;
+  }
+}
+main .main-container-contacto .cajas {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: baseline;
   margin-right: 16rem;
 }
 @media screen and (max-width: 1280px) {
-  .main-container-contacto .cajas {
+  main .main-container-contacto .cajas {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas {
+  main .main-container-contacto .cajas {
     display: flex;
     flex-direction: column;
     margin-right: 0px;
   }
 }
-.main-container-contacto .cajas .info-main {
+main .main-container-contacto .cajas .info-main {
   display: flex;
   padding: 1rem;
   margin-top: 4rem;
@@ -580,38 +589,39 @@ main {
   background: rgba(248, 248, 248, 0.7137254902);
   align-items: center;
 }
-.main-container-contacto .cajas .info-main:hover {
+main .main-container-contacto .cajas .info-main:hover {
   background: #ffffff;
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .info-main:hover {
+  main .main-container-contacto .cajas .info-main:hover {
     background: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .main-container-contacto .cajas .info-main {
+  main .main-container-contacto .cajas .info-main {
     padding: 1rem;
     display: flex;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .info-main {
+  main .main-container-contacto .cajas .info-main {
     margin-left: 0%;
     margin-top: 1rem;
+    background: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .info-main .texto .text-box3 {
+  main .main-container-contacto .cajas .info-main .texto .text-box3 {
     width: 65vw;
     background: #ffffff;
   }
 }
 @media screen and (max-width: 1280px) {
-  .main-container-contacto .cajas .info-main .texto .text-box3 {
+  main .main-container-contacto .cajas .info-main .texto .text-box3 {
     margin: 0;
   }
 }
-.main-container-contacto .cajas .form-section-container {
+main .main-container-contacto .cajas .form-section-container {
   display: flex;
   padding: 2rem;
   margin-top: 5rem;
@@ -620,36 +630,36 @@ main {
   border: solid;
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .form-section-container {
+  main .main-container-contacto .cajas .form-section-container {
     margin-left: 3rem;
   }
 }
-.main-container-contacto .cajas .form-section-container:hover {
+main .main-container-contacto .cajas .form-section-container:hover {
   background: #ffffff;
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .form-section-container:hover {
+  main .main-container-contacto .cajas .form-section-container:hover {
     background: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .main-container-contacto .cajas .form-section-container {
+  main .main-container-contacto .cajas .form-section-container {
     padding: 0.5rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .form-section-container {
-    margin-left: 10%;
+  main .main-container-contacto .cajas .form-section-container {
+    margin-left: 25%;
     padding: 1rem;
     margin-top: 0px;
   }
 }
-.main-container-contacto .cajas .form-section-container #contacto {
+main .main-container-contacto .cajas .form-section-container #contacto {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-.main-container-contacto .cajas .form-section-container #contacto h2 {
+main .main-container-contacto .cajas .form-section-container #contacto h2 {
   text-align: center;
   padding-right: 2rem;
   padding: 0.3rem;
@@ -657,25 +667,25 @@ main {
   font-family: "Edu NSW ACT Cursive", cursive;
 }
 @media screen and (max-width: 1024px) {
-  .main-container-contacto .cajas .form-section-container #contacto h2 {
+  main .main-container-contacto .cajas .form-section-container #contacto h2 {
     font-size: 1.4rem;
   }
 }
-.main-container-contacto .cajas .form-section-container #contacto form {
+main .main-container-contacto .cajas .form-section-container #contacto form {
   display: grid;
   align-items: baseline;
 }
 @media screen and (max-width: 1280px) {
-  .main-container-contacto .cajas .form-section-container #contacto form {
+  main .main-container-contacto .cajas .form-section-container #contacto form {
     padding-left: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-container-contacto .cajas .form-section-container #contacto form {
+  main .main-container-contacto .cajas .form-section-container #contacto form {
     padding-left: 0;
   }
 }
-.main-container-contacto .cajas .form-section-container #contacto form button {
+main .main-container-contacto .cajas .form-section-container #contacto form button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -692,7 +702,7 @@ main {
   background-color: transparent;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
-.main-container-contacto .cajas .form-section-container #contacto form button:hover {
+main .main-container-contacto .cajas .form-section-container #contacto form button:hover {
   color: rgb(0, 0, 0);
   background-color: rgba(218, 203, 245, 0.8);
   border-color: rgba(218, 203, 245, 0.8);
@@ -720,12 +730,15 @@ footer ul li a {
   text-decoration: none;
   font-family: "Edu NSW ACT Cursive", cursive;
   transition: background-color 0.8s ease;
+  color: #ffffff;
+  font-weight: 150;
+  font-size: 1.3rem;
 }
 footer ul li a:visited {
-  color: #fcfcfc;
+  color: rgba(107, 89, 139, 0.0274509804);
 }
 footer ul li a:hover {
-  color: #ffffff;
+  color: #3313c4;
 }
 footer ul li a i {
   padding: 1rem;

@@ -163,23 +163,25 @@ main{background-color: variables.$color-ter;}
       @include mixins.ttprincipales(right,0.3rem );
       }
     .cards {
-      display: flex;
+      display:flex;
       grid-template-columns: auto;
       grid-column: 1/13;
       justify-content: center;
-          @include media-queris.laptops{     
+          @include media-queris.laptops{  
+            display: flex;      
           justify-content: flex-start;
           flex-wrap: wrap;
           flex-direction: row;
           align-content: stretch;
-          align-items: stretch;  
-      }
+          align-items: stretch; 
+          grid-columns: 1/13;
+        }
         .card {
+          display: grid;
+          grid-column: 1/13;
           margin: 0.1rem;          
-          flex-grow: 1;
           flex-shrink: 1;
           flex-basis: auto;
-          width: 20vw;
           @include media-queris.mobile{
             width: 93vw!important;
           }
@@ -193,9 +195,10 @@ main{background-color: variables.$color-ter;}
         }
       }
       .banner {
-      width: 98vw;
+        width: 96vw;    
+        margin:0.9rem;
       @include media-queris.laptops{
-      width: 97vw;
+      width: 95vw;
       }
       @include media-queris.mobile{
       display:none;
@@ -218,10 +221,18 @@ main{background-color: variables.$color-ter;}
       grid-row: auto;
       @include mixins.ttprincipales(right,0.3rem )
       }
-      #carouselExample {
-        background-color: #000000;
+      #carouselExample {       
+        background-image: url(../assets/img/carousel1.jpg);
+        background-repeat: no-repeat;  
+        @include media-queris.laptops{
+        background-image: url(../assets/img/carousel2.jpg);
+        background-repeat: no-repeat;
+        }      
         @include media-queris.mobile{
           display: contents;
+        }
+        .carousel-item .card{
+          background: #ffffffce;
         }
         .carousel-indicators {
           bottom: -3rem;
@@ -243,6 +254,10 @@ main{background-color: variables.$color-ter;}
       }
     }
 /*MAIN CONTACTO*/
+main{
+  @include media-queris.mobile{
+    display:flex;
+  }
 .main-container-contacto {
   display: grid;  
 background-image: url(../assets/img/fotovieja1.jpeg);
@@ -252,10 +267,13 @@ background-image: url(../assets/img/fotovieja1.jpeg);
 }
     .titulo-contacto {
       display: flex;
-      @include mixins.ttprincipales(right,0.3rem );
+      @include mixins.ttprincipales(right,0.3rem);
+      @include media-queris.mobile{height: 7rem;}
+      flex-direction: row-reverse;  
       }
       .cajas{
       display: flex;
+      flex-direction: row-reverse;
       flex-wrap: nowrap;
       justify-content: space-around;
       align-items: baseline;
@@ -282,7 +300,7 @@ background-image: url(../assets/img/fotovieja1.jpeg);
           &:hover{
             background: #ffffff;
             @include media-queris.mobile{
-            background: none;
+            background: none;;
               }
             }
             @include media-queris.laptops{
@@ -292,6 +310,7 @@ background-image: url(../assets/img/fotovieja1.jpeg);
             @include media-queris.mobile{
             margin-left: 0%;
             margin-top: 1rem;
+            background: none;
             }
           .texto .text-box3{
             @include media-queris.mobile{
@@ -323,7 +342,7 @@ background-image: url(../assets/img/fotovieja1.jpeg);
               padding:0.5rem;
             }
             @include media-queris.mobile{
-              margin-left:10%;
+              margin-left:25%;
               padding:1rem;
               margin-top: 0px;
             }
@@ -352,23 +371,7 @@ background-image: url(../assets/img/fotovieja1.jpeg);
         }
       }
       }
-/*     .imagencontacto {
-      display: grid;
-      grid-row: 2/4;       
-      .img-contacto-box{
-        display: grid;
-        justify-content: space-around;
-        background: white;
-          .imgcontacto {
-          width: 45vw;
-          height: 69vh;
-          align-items: stretch;    
-          @include media-queris.mobile{
-            display:none;
-          }      
-        }
-        }
-      } */
+      }
     }
 
 

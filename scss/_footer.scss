@@ -8,10 +8,10 @@ footer {
       width: 100%;
       border: 0.3rem;
       ul {list-style-type: none;
-        li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;          
-          a {padding: 0.2rem; text-decoration: none; font-family: variables.$tipografia-ttlossec;transition: background-color 0.8s ease;
-            &:visited {color: #fcfcfc;}
-            &:hover {color: #ffffff;}          
+        li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;        
+          a {padding: 0.2rem; text-decoration: none; font-family: variables.$tipografia-ttlossec;transition: background-color 0.8s ease;color:#ffffff;font-weight:150;font-size:1.3rem;
+            &:visited {color: #6b598b07;}
+            &:hover {color: #3313c4;}          
           i{padding:1rem;}
           
         }
