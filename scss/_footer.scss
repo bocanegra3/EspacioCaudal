@@ -10,8 +10,8 @@ footer {
       ul {list-style-type: none;
         li {padding-left: 1rem; padding-right:0.5rem;display:flex; justify-content: space-between;        
           a {padding: 0.2rem; text-decoration: none; font-family: variables.$tipografia-ttlossec;transition: background-color 0.8s ease;color:#ffffff;font-weight:150;font-size:1.3rem;
-            &:visited {color: #6b598b07;}
-            &:hover {color: #3313c4;}          
+            &:visited {color: #00000000;}
+            &:hover {color: #250c92;}          
           i{padding:1rem;}
           
         }

@@ -271,7 +271,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .main-sobremi div .imgsobremi {
-    width: 90vw;
+    width: 94vw;
     grid-row: 3/3;
   }
 }
@@ -390,6 +390,8 @@ main {
 }
 @media screen and (max-width: 768px) {
   .main-container-portfolio .cards .card {
+    display: flex;
+    align-items: center;
     width: 93vw !important;
   }
 }
@@ -477,6 +479,14 @@ main {
 @media screen and (max-width: 768px) {
   .main-container-cursos #carouselExample {
     display: contents;
+  }
+}
+.main-container-cursos #carouselExample .carousel-inner {
+  height: 40rem;
+}
+@media screen and (max-width: 1280px) {
+  .main-container-cursos #carouselExample .carousel-inner {
+    height: 37rem;
   }
 }
 .main-container-cursos #carouselExample .carousel-item .card {
@@ -579,6 +589,7 @@ main .main-container-contacto .cajas {
     display: flex;
     flex-direction: column;
     margin-right: 0px;
+    margin-bottom: 7rem;
   }
 }
 main .main-container-contacto .cajas .info-main {
@@ -735,10 +746,10 @@ footer ul li a {
   font-size: 1.3rem;
 }
 footer ul li a:visited {
-  color: rgba(107, 89, 139, 0.0274509804);
+  color: rgba(0, 0, 0, 0);
 }
 footer ul li a:hover {
-  color: #3313c4;
+  color: #250c92;
 }
 footer ul li a i {
   padding: 1rem;

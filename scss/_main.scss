@@ -90,7 +90,7 @@ main{background-color: variables.$color-ter;}
             width: 45vw;
           }
         @include media-queris.mobile{
-          width: 90vw;
+          width: 94vw;
           grid-row: 3/3;
         }
         }
@@ -183,6 +183,8 @@ main{background-color: variables.$color-ter;}
           flex-shrink: 1;
           flex-basis: auto;
           @include media-queris.mobile{
+          display: flex;
+          align-items: center;
             width: 93vw!important;
           }
           &:hover{
@@ -231,8 +233,14 @@ main{background-color: variables.$color-ter;}
         @include media-queris.mobile{
           display: contents;
         }
+        .carousel-inner{
+          height: 40rem;
+          @include media-queris.laptops{
+            height: 37rem;
+          }
+        }
         .carousel-item .card{
-          background: #ffffffce;
+          background: #ffffffce;          
         }
         .carousel-indicators {
           bottom: -3rem;
@@ -285,6 +293,7 @@ background-image: url(../assets/img/fotovieja1.jpeg);
         display:flex;
         flex-direction: column;
         margin-right: 0px;
+        margin-bottom: 7rem;
 
       }      
       
